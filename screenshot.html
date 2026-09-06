@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1e1e2e;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh; padding: 40px;
+  }
+  .terminal {
+    background: #181825;
+    border-radius: 12px;
+    padding: 24px 28px;
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #cdd6f4;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    max-width: 1000px;
+    width: 100%;
+    border: 1px solid #313244;
+  }
+  .terminal .title-bar {
+    display: flex; align-items: center; gap: 8px;
+    padding-bottom: 16px; border-bottom: 1px solid #313244;
+    margin-bottom: 16px;
+  }
+  .terminal .title-bar .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .terminal .title-bar .dot.r { background: #f38ba8; }
+  .terminal .title-bar .dot.y { background: #f9e2af; }
+  .terminal .title-bar .dot.g { background: #a6e3a1; }
+  .terminal .title-bar .title { margin-left: 12px; font-size: 13px; color: #6c7086; }
+  .terminal .line { white-space: pre; }
+  .terminal .green { color: #a6e3a1; }
+  .terminal .yellow { color: #f9e2af; }
+  .terminal .red { color: #f38ba8; }
+  .terminal .dim { color: #6c7086; }
+  .terminal .cyan { color: #89dceb; }
+  .terminal .magenta { color: #f5c2e7; }
+  .terminal .bold { color: #cdd6f4; font-weight: 700; }
+  .terminal .sep { color: #45475a; }
+  .terminal .header { color: #f5e0dc; }
+</style>
+</head>
+<body>
+<div class="terminal">
+  <div class="title-bar">
+    <div class="dot r"></div>
+    <div class="dot y"></div>
+    <div class="dot g"></div>
+    <div class="title">loadavg-watch — bash</div>
+  </div>
+
+  <div class="line"><span class="bold cyan">  /proc/loadavg</span><span class="dim"> — 4 cores</span>  <span class="dim">[36d 9h 12m]</span></div>
+  <div class="line"></div>
+  <div class="line">  <span class="bold">Load:</span>  <span class="green bold"> 0.27 /  0.47 /  0.50</span>  <span class="dim">(2/1200 tasks, pid 11082)</span></div>
+  <div class="line"></div>
+  <div class="line">  <span class="bold">1 min:</span>   <span class="green">  0.27</span>  <span class="dim">(0.07x)</span></div>
+  <div class="line">  <span class="bold">5 min:</span>   <span class="green">  0.47</span>  <span class="dim">(0.12x)</span></div>
+  <div class="line"> <span class="bold">15 min:</span>   <span class="green">  0.50</span>  <span class="dim">(0.13x)</span></div>
+  <div class="line"></div>
+  <div class="line">  <span class="bold">Processes:</span></div>
+  <div class="line">  <span class="green">  Running:     1</span>  <span class="cyan">Sleeping: 1199</span></div>
+  <div class="line">  <span class="yellow">  Stopped:     0</span>  <span class="red">Zombie:      0</span>  <span class="dim">Total: 1200</span></div>
+  <div class="line"></div>
+  <div class="line">  <span class="bold">Memory:</span>  <span class="yellow">5.9 GB</span> / 15.6 GB  <span class="dim">(37.9% used)</span></div>
+  <div class="line">  <span class="bold">Swap:  </span>  0 B / 8.0 GB  <span class="dim">( 0.0% used)</span>  <span class="yellow">dirty:  12 MB</span></div>
+  <div class="line"></div>
+  <div class="line">  <span class="bold">Load Bars:</span></div>
+  <div class="line"></div>
+  <div class="line">    <span class="bold">1 min</span>  <span class="green">######................................</span>   <span class="green">  0.27</span> <span class="dim">(0.07x)</span></div>
+  <div class="line">    <span class="bold">5 min</span>  <span class="green">#########...........................</span>   <span class="green">  0.47</span> <span class="dim">(0.12x)</span></div>
+  <div class="line">  <span class="bold">15 min</span>  <span class="green">##########..........................</span>   <span class="green">  0.50</span> <span class="dim">(0.13x)</span></div>
+  <div class="line"></div>
+  <div class="line">  <span class="dim">Step 1  |  Elapsed 3s  |  Refresh every 3s  |  Ctrl+C to exit</span></div>
+</div>
+</body>
+</html>
